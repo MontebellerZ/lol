@@ -1,0 +1,30 @@
+<%= form_for(playerrole) do |f| %>
+  <% if playerrole.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(playerrole.errors.count, "error") %> prohibited this playerrole from being saved:</h2>
+
+      <ul>
+      <% playerrole.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_id %>
+    <% player_array = Player.all.map { |player| [player.nickname, player.id] } %>
+    <%= f.select :player_id, (options_for_select(player_array)) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role_id %>
+    <%#= f.select :role_id, [['Topo', 1], ['Jungle', 2], ['Meio', 3], ['Atirador', 4], ['Suporte', 5]] %>
+    <% roles_array = Role.all.map { |role| [role.role, role.id] } %>
+    <%= f.select :role_id, (options_for_select(roles_array)) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

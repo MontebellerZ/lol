@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+
+<h2><%= @playerrole.player.nickname %> tem a role <%= @playerrole.role.role %></h2>
+
+<p>
+  <strong>ID playerrole:</strong>
+  <%= @playerrole.id %>
+</p>
+
+<br>
+
+<%= link_to 'Edit', edit_playerrole_path(@playerrole) %> |
+<%= link_to 'Back', playerroles_path %>

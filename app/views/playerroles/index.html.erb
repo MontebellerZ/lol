@@ -1,0 +1,112 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Teams', teams_path %> |
+<%= link_to 'Players', players_path %> |
+<%= link_to 'Roles', roles_path %> |
+<%= link_to 'Back', :back %>
+
+<br><br>
+
+<% x = 0 %>
+
+<table class="inline">
+  
+  <caption><h2>Player Roles</h2></caption>
+  
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Role</th>
+      <th colspan="2">Comandos</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <% @players.each do |player| %>
+    
+      <% if player.roles.count > 0 %>
+        
+        <tr style="height: 1px"></tr>
+    
+        <tr>
+          
+          <td rowspan="<%= player.roles.count %>">ID <%= player.id %>: <%= link_to player.nickname+' ('+player.nome+')', player %></td>
+          
+          <% i = 0 %>
+            
+          <% @playerroles.each do |playerrole| %>
+          
+            <% if playerrole.player_id == player.id %>
+            
+              <% if i > 0 %></tr><tr><% end %>
+              
+              <td><%= playerrole.role.role %></td>
+              
+              <td><%= link_to 'Show', playerrole %></td>
+              
+              <td><%= link_to 'Destroy', playerrole, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              
+              <% i=i+1 %>
+            
+            <% end %>
+            
+          <% end %>
+          
+        </tr>
+        
+      <% end %>
+  
+      <% if player.roles.count <= 0 %>
+      
+        <% x=x+1 %>
+      
+      <% end %>
+      
+    <% end %>
+    
+  </tbody>
+  
+</table>
+
+<% if x>0 %>
+
+  <table class="inline">
+    
+    <caption><h2>Players sem Role</h2></caption>
+    
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    
+    <% @players.each do |player| %>
+    
+      <% if player.roles.count <= 0 %>
+        
+        <tr style="height: 1px"></tr>
+          
+        <tr>
+          
+          <td>ID <%= player.id %>:  <%= link_to player.nickname+' ('+player.nome+')', player %></td>
+          <td>--</td>
+          
+        </tr>
+      
+      <% end %>
+      
+    <% end %>
+    
+  </table>
+
+<% end %>
+
+<fieldset>
+  
+  <legend><h2>New Player Role</h2></legend>
+  
+  <%= render 'form', playerrole: @playerrole %>
+  
+</fieldset>

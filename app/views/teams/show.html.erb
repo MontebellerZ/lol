@@ -1,0 +1,82 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Team: <%= @team.nome %></h1>
+
+<p>
+  <strong>ID:</strong>
+  <%= @team.id %>
+</p>
+
+<p>
+  <strong>Sigla:</strong>
+  <%= @team.sigla %>
+</p>
+
+<p>
+  <strong>Instituicao:</strong>
+  <%= @team.instituicao %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Teams', teams_path %> |
+<%= link_to 'Back', :back %> |
+<%= link_to 'New Team', new_team_path %>
+
+<br><br><br>
+
+
+
+<table>
+  
+  <caption><h2><%= @team.nome %> Players</h2></caption>
+  
+  <% if @team.players.size > 0 %>
+  
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome Completo</th>
+        <th>Nickname</th>
+        <th>Idade</th>
+        <th>Roles</th>
+        <th>Elo</th>
+        <th>Comandos</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @team.players.each do |player| %>
+        <tr>
+          <td><%= player.id %></td>
+          <td><%= player.nome %> <%= player.sobrenome %></td>
+          <td><%= player.nickname %></td>
+          <td><%= player.idade %></td>
+          <td>
+            <% i = 0 %>
+            <% @playerroles.each do |playerrole| %>
+              <% if playerrole.player_id == player.id %>
+                <% if i > 0 %> / <% end %>
+                <%= playerrole.role.role %>
+                <% i=i+1 %>
+              <% end %>
+            <% end %>
+          </td>
+          <td><%= player.elo %> <%= player.divisao %></td>
+          <td><%= link_to 'Show', player %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    
+  <% end %>
+    
+  <% if @team.players.size <= 0 %>
+  
+    <thead>
+      <tr>
+        <th>O time ainda não possui nenhum Player</th>
+      </tr>
+    </thead>
+  
+  <% end %>
+  
+</table>

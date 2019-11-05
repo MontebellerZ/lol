@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Player: <%= @player.nome %> "<%= @player.nickname %>" <%= @player.sobrenome %></h1>
+
+<p>
+  <strong>Nome completo:</strong>
+  <%= @player.nome %> <%= @player.sobrenome %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @player.idade %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @player.nickname %>
+</p>
+
+<p>
+  <strong>Roles:</strong>
+  <% i=0 %>
+  <% @player.roles.each do |role| %>
+    <% if i>0 %> / <% end %>
+    <%= role.role %>
+    <% i=i+1 %>
+  <% end %>
+  (<%= link_to 'Add Roles', playerroles_path %>)
+</p>
+
+<p>
+  <strong>Elo:</strong>
+  <%= @player.elo %> <%= @player.divisao %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= link_to @player.team.nome, @player.team %>
+</p>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Players', players_path %> |
+<%= link_to 'Back', :back %> |
+<%= link_to 'New Player', new_player_path %>

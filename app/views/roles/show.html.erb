@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Role: <%= @role.role %></h1>
+<%= link_to 'Back', roles_path %>
+
+<table>
+  
+  <caption><h2>Players da Role <%= @role.role %></h2></caption>
+  
+  <% if @role.players.size > 0 %>
+  
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome Completo</th>
+        <th>Nickname</th>
+        <th>Idade</th>
+        <th>Elo</th>
+        <th>Comandos</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @role.players.each do |player| %>
+        <tr>
+          <td><%= player.id %></td>
+          <td><%= player.nome %> <%= player.sobrenome %></td>
+          <td><%= player.nickname %></td>
+          <td><%= player.idade %></td>
+          <td><%= player.elo %> <%= player.divisao %></td>
+          <td><%= link_to 'Show player', player %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    
+  <% end %>
+    
+  <% if @role.players.size <= 0 %>
+  
+    <thead>
+      <tr>
+        <th>A role ainda não possui nenhum Player</th>
+      </tr>
+    </thead>
+  
+  <% end %>
+  
+</table>
