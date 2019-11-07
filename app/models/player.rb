@@ -1,7 +1,7 @@
 class Player < ApplicationRecord
     
     has_many :roles, through: :playerroles
-    has_many :playerroles
+    has_many :playerroles, dependent: :destroy
     
     belongs_to :team
     
