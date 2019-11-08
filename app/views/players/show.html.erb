@@ -9,7 +9,7 @@
 
 <p>
   <strong>Idade:</strong>
-  <%= ((Time.zone.now - @player.datanasc.to_time) / 1.year.seconds).floor %>
+  <%= age @player.datanasc %>
 </p>
 
 <p>

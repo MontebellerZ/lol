@@ -20,4 +20,12 @@ module ApplicationHelper
         date.strftime("%e / %_m / %Y")
     end
     
+    def age(data)
+        a = Date.today.year - data.year
+        a = a - 1 if (
+            data.month > Date.today.month or (data.month >= Date.today.month and data.day > Date.today.day)
+        )
+        a
+    end
+    
 end

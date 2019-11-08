@@ -40,7 +40,7 @@
   <div class="field">
     <%= f.label :team_id %>
     <% team_array = Team.all.map { |team| [team.nome, team.id] } %>
-    <%= f.select :team_id, (options_for_select(team_array)) %>
+    <%= f.select(:team_id, options_for_select(team_array, :selected => f.object.team_id)) %>
   </div>
 
   <div class="actions">

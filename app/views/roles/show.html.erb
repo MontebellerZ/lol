@@ -26,7 +26,7 @@
           <td><%= player.id %></td>
           <td><%= player.nome %> <%= player.sobrenome %></td>
           <td><%= player.nickname %></td>
-          <td><%= ((Time.zone.now - player.datanasc.to_time) / 1.year.seconds).floor %></td>
+          <td><%= age player.datanasc %></td>
           <td><%= player.elo %> <%= player.divisao %></td>
           <td><%= link_to 'Show player', player %></td>
         </tr>

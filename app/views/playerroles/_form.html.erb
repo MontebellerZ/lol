@@ -14,14 +14,14 @@
   <div class="field">
     <%= f.label :player_id %>
     <% player_array = Player.all.map { |player| [player.nickname, player.id] } %>
-    <%= f.select :player_id, (options_for_select(player_array)) %>
+    <%= f.select(:player_id, options_for_select(player_array, :selected => f.object.player_id)) %>
   </div>
 
   <div class="field">
     <%= f.label :role_id %>
     <%#= f.select :role_id, [['Topo', 1], ['Jungle', 2], ['Meio', 3], ['Atirador', 4], ['Suporte', 5]] %>
     <% roles_array = Role.all.map { |role| [role.role, role.id] } %>
-    <%= f.select :role_id, (options_for_select(roles_array)) %>
+    <%= f.select(:role_id, options_for_select(role_array, :selected => f.object.role_id)) %>
   </div>
 
   <div class="actions">
