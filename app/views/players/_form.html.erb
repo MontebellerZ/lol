@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :idade %>
-    <%= f.number_field :idade %>
+    <%= f.label :datanasc %>
+    <%= f.date_select :datanasc, :start_year=>Date.today.year - 100 , :end_year=>Date.today.year - 10, :add_month_numbers=>true %>
   </div>
 
   <div class="field">

@@ -36,7 +36,7 @@
         <td><strong><%= player.nome %></strong></td>
         <td><strong><%= player.nickname %></strong></td>
         <td><%= player.sobrenome %></td>
-        <td><%= player.idade %></td>
+        <td><%= ((Time.zone.now - player.datanasc.to_time) / 1.year.seconds).floor %></td>
         
         <td>
           

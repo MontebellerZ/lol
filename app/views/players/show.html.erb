@@ -9,7 +9,12 @@
 
 <p>
   <strong>Idade:</strong>
-  <%= @player.idade %>
+  <%= ((Time.zone.now - @player.datanasc.to_time) / 1.year.seconds).floor %>
+</p>
+
+<p>
+  <strong>Data Nascimento:</strong>
+  <%= comma @player.datanasc %>
 </p>
 
 <p>

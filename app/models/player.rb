@@ -7,6 +7,4 @@ class Player < ApplicationRecord
     
     validates_size_of :nome, :nickname, {minimum: 3, maximum: 20}
     
-    validates :idade, numericality: { only_integer: true }
-    
 end
