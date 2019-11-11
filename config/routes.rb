@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  root to: "players#index"
+  get 'index/index'
+
+  root to: "index#index"
   
   resources :playerroles
   resources :teams

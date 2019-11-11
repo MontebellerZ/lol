@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Team: <%= @team.nome %></h1>
+
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>ID:</strong>
@@ -17,16 +17,16 @@
   <%= @team.instituicao %>
 </p>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Teams', teams_path %> |
-<%= link_to 'Back', :back %> |
-<%= link_to 'New Team', new_team_path %>
+<%= link_to 'Edit', edit_team_path(@team), class: "btn btn-sm btn-warning" %> |
+<%= link_to 'Teams', teams_path, class: "btn btn-sm btn-warning" %> |
+<%= link_to 'New Team', new_team_path, class: "btn btn-sm btn-warning" %> |
+<%= link_to 'Back', :back, class: "btn btn-sm btn-warning" %>
 
 <br><br><br>
 
 
 
-<table>
+<table class="table table-dark table-striped table-hover table-sm">
   
   <caption><h2><%= @team.nome %> Players</h2></caption>
   
@@ -50,7 +50,7 @@
           <td><%= player.id %></td>
           <td><%= player.nome %> <%= player.sobrenome %></td>
           <td><%= player.nickname %></td>
-          <td><%= age player.datanasc %></td>v
+          <td><%= age player.datanasc %></td>
           <td>
             <% i = 0 %>
             <% @playerroles.each do |playerrole| %>

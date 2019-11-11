@@ -25,7 +25,12 @@ module ApplicationHelper
         a = a - 1 if (
             data.month > Date.today.month or (data.month >= Date.today.month and data.day > Date.today.day)
         )
+        a = "indefinido" if (a >= 99)
         a
+    end
+    
+    def hora
+       Time.now.in_time_zone('Brasilia')
     end
     
 end

@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Player: <%= @player.nome %> "<%= @player.nickname %>" <%= @player.sobrenome %></h1>
+
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Nome completo:</strong>
@@ -43,7 +43,7 @@
   <%= link_to @player.team.nome, @player.team %>
 </p>
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Players', players_path %> |
-<%= link_to 'Back', :back %> |
-<%= link_to 'New Player', new_player_path %>
+<%= link_to 'Edit', edit_player_path(@player), class: "btn btn-sm btn-warning" %> |
+<%= link_to 'Players', players_path, class: "btn btn-sm btn-warning" %> |
+<%= link_to 'New Player', new_player_path, class: "btn btn-sm btn-warning" %> |
+<%= link_to 'Back', :back, class: "btn btn-sm btn-warning" %>

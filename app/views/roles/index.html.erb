@@ -1,15 +1,16 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Roles</h1>
 
-<%= link_to 'Teams', teams_path %> |
-<%= link_to 'Player', players_path %> |
-<%= link_to 'PlayerRoles', playerroles_path %> |
-<%= link_to 'Back', :back %>
+<%= link_to 'Players', players_path, class: "btn btn-sm btn-warning" %> |
+<%= link_to 'Teams', teams_path, class: "btn btn-sm btn-warning" %> |
+<%= link_to 'PlayerRoles', playerroles_path, class: "btn btn-sm btn-warning" %>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Back', :back, class: "btn btn-sm btn-secondary" %>
 
 <br><br>
 
-<table>
+<table class="table-dark table-striped table-hover table-sm">
   <thead>
     <tr>
       <th>ID</th>

@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  // background-color: #fff;
+  // color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -18,23 +18,23 @@ p, ol, ul {
 }
 
 pre {
-  background-color: #eee;
+  // background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-a {
-  color: #000;
+// a {
+//   color: #000;
 
-  &:visited {
-    color: #000;
-  }
+//   &:visited {
+//     color: #000;
+//   }
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
 
 div {
   &.field, &.actions {
@@ -81,21 +81,24 @@ label {
   display: block;
 }
 
-td, th{
-  border: 1px dashed black;
-  padding: 6px 9px;
+// table {
+//   background-color: #8de8b4;
+// }
+
+// th {
+//   background-color: #a1acde;
+// }
+
+// td {
+//   background-color: #ced4ee;
+// }
+
+thead{
+    color: gold;
 }
 
-table {
-  background-color: #8de8b4;
-  border: 1px solid black;
-  padding: 2px;
-}
-
-th {
-  background-color: #a1acde;
-}
-
-td {
-  background-color: #ced4ee;
+caption {
+  caption-side: top;
+  text-align: center;
+  color: gold;
 }

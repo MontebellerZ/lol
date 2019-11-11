@@ -42,9 +42,11 @@
     <% team_array = Team.all.map { |team| [team.nome, team.id] } %>
     <%= f.select(:team_id, options_for_select(team_array, :selected => f.object.team_id)) %>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+  <br>
+  
+  <%= f.submit 'Submit ', :class => 'btn btn-success btn-sm' %> |
+  <%= link_to 'Back', players_path, class: "btn btn-warning btn-sm" %>
+  
 <% end %>
 

@@ -25,8 +25,10 @@
     <%= f.label :instituicao %>
     <%= f.text_field :instituicao %>
   </div>
+  
+  <br>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit 'Submit ', :class => 'btn btn-success btn-sm' %> |
+  <%= link_to 'Back', teams_path, class: "btn btn-warning btn-sm" %>
+  
 <% end %>

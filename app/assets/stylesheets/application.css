@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+ 
+ html{
+     height: 100%;
+ }
+ 
+ body{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(closest-side at 50% 40%, black 130%, gold 250%);
+ }
+ 
+ .btn:first-line{
+  color: black;
+  font-weight: bold;
+ }
+ 
+ p strong{
+     color: gold;
+ }
+ 
+ h1, h2, p{
+     color: white;
+ }
+ 
+ label{
+  color: gold;
+ }
+ 
+ input, select{
+  background-color: #333333;
+  border-color: gold;
+  color: gold;
+ }
+ 
+ ul{
+  color: white;
+  list-style-type: none
+ }
