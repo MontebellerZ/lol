@@ -19,7 +19,6 @@
 
   <div class="field inline space">
     <%= f.label :role_id %>
-    <%#= f.select :role_id, [['Topo', 1], ['Jungle', 2], ['Meio', 3], ['Atirador', 4], ['Suporte', 5]] %>
     <% roles_array = Role.all.map { |role| [role.role, role.id] } %>
     <%= f.select(:role_id, options_for_select(roles_array, :selected => f.object.role_id)) %>
   </div>

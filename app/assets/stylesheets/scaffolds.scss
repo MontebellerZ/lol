@@ -58,7 +58,7 @@ div {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: rgba(0,0,0,0.5);
 
   h2 {
     text-align: left;
@@ -68,12 +68,12 @@ div {
     margin: -7px;
     margin-bottom: 0;
     background-color: #c00;
-    color: #fff;
   }
 
   ul li {
     font-size: 12px;
     list-style: square;
+    color: gold;
   }
 }
 
@@ -81,9 +81,9 @@ label {
   display: block;
 }
 
-// table {
-//   background-color: #8de8b4;
-// }
+#principal{
+  margin: 0 30px;
+}
 
 // th {
 //   background-color: #a1acde;

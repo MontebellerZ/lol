@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <title>LoL Analysis</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   
-  <link rel="stylesheet" type="text/css" href="/lol/app/assets/stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="/lol/app/assets/stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" type="text/css" href="/lol/app/assets/stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="/lol/app/assets/stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" type="text/css" href="/lol/app/assets/stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="/lol/app/assets/stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="all.css">
   
 </head>
 
 <body>
   
-  <div class="container">
-    <div id="menu_principal">
-      <ul>
-        <li>Players</li>
-        <li>Teams</li>
-        <li>Roles</li>
-      </ul>
+  <div class="container-fluid" id="topo">
+    
+    <div class="row">
+    
+      <div class="col-12" id="logo"><%= link_to image_tag("Rammus.png"), index_index_path %></div>
+      
+      
+      <!--<div id="menu_principal" class="col-9">-->
+      <!--  <ul>-->
+      <!--    <li><#%= link_to 'Players', players_path %></li>-->
+      <!--    <li><#%= link_to 'Teams', teams_path %></li>-->
+      <!--    <li><#%= link_to 'Roles', roles_path %></li>-->
+      <!--  </ul>-->
+      <!--</div>-->
+    
     </div>
+    
   </div>
   
-  <%= yield %>
+  <div id="principal">
+    <%= yield %>
+  </div>
+  
+  <div id="rodape">
+    <i class="fab fa-instagram"></i>
+    <%= link_to "@filipe_montebeller", "https://www.instagram.com/filipe_montebeller/", target: '_blank' %>
+    <i class="fab fa-twitter"></i>
+    <%= link_to "@FMontebellerZ", "https://twitter.com/FMontebellerz", target: '_blank' %>
+  </div>
+    
+  </div>
   
 </body>
 </html>

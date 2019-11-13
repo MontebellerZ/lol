@@ -1,31 +1,55 @@
 module ApplicationHelper
     
     def comma(date)
-        # formatting date: 31, Aug 2007
-        date.strftime("%e, %b %Y")
+        if date==nil
+            a='indefinido'
+            a
+        else
+            # formatting date: 31, Aug 2007
+            date.strftime("%e, %b %Y")
+        end
     end
     
     def comma_number(date)
-        # formatting date: 31, 8, 2007
-        date.strftime("%e, %_m, %Y")
+        if date==nil
+            a='indefinido'
+            a
+        else
+            # formatting date: 31, 8, 2007
+            date.strftime("%e, %_m, %Y")
+        end
     end
     
     def bars(date)
-        # formatting date: 31 / Aug / 2007
-        date.strftime("%e / %b / %Y")
+        if date==nil
+            a='indefinido'
+            a
+        else
+            # formatting date: 31 / Aug / 2007
+            date.strftime("%e / %b / %Y")
+        end
     end
     
     def bars_number(date)
-        # formatting date: 31 / 8 / 2007
-        date.strftime("%e / %_m / %Y")
+        if date==nil
+            a='indefinido'
+            a
+        else
+            # formatting date: 31 / 8 / 2007
+            date.strftime("%e / %_m / %Y")
+        end
     end
     
     def age(data)
-        a = Date.today.year - data.year
-        a = a - 1 if (
-            data.month > Date.today.month or (data.month >= Date.today.month and data.day > Date.today.day)
-        )
-        a = "indefinido" if (a >= 99)
+        if data==nil
+            a='indefinido'
+        else
+            fuso = Date.today.in_time_zone('Brasilia')
+            a = fuso.year - data.year
+            a = a - 1 if (
+                data.month > fuso.month or (data.month >= fuso.month and data.day > fuso.day)
+            )
+        end
         a
     end
     

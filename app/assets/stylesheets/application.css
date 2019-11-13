@@ -15,26 +15,53 @@
  */
  
  html{
-     height: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
  }
  
  body{
+  margin: 0px;
+  padding: 0px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-image: radial-gradient(closest-side at 50% 40%, black 130%, gold 250%);
  }
  
- .btn:first-line{
-  color: black;
+ #menu_principal ul li{
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 20px;
+ }
+ 
+ #logo img{
+  height: 140px;
+  border-radius: 50%;
+ }
+ 
+ #topo{
+  text-align: center;
+ }
+ 
+ #rodape{
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  margin: 0 auto;
+  text-align: center;
+ }
+ 
+ .btn{
   font-weight: bold;
  }
  
  p strong{
-     color: gold;
+  color: gold;
  }
  
  h1, h2, p{
-     color: white;
+  color: white;
  }
  
  label{

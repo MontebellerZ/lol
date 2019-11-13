@@ -1,13 +1,13 @@
 <h1>Players</h1>
 
-<%= link_to 'Teams', teams_path, class: "btn btn-warning btn-sm" %> |
-<%= link_to 'PlayerRoles', playerroles_path, class: "btn btn-warning btn-sm" %> |
-<%= link_to 'Roles', roles_path, class: "btn btn-warning btn-sm" %>
+<%= link_to 'Teams', teams_path, class: "btn btn-warning btn-sm", style: 'color: black' %> |
+<%= link_to 'PlayerRoles', playerroles_path, class: "btn btn-warning btn-sm", style: 'color: black' %> |
+<%= link_to 'Roles', roles_path, class: "btn btn-warning btn-sm", style: 'color: black' %>
 
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Player', new_player_path, class: "btn btn-primary btn-sm" %> |
-<%= link_to 'Back', :back, class: "btn btn-secondary btn-sm" %>
+<%= link_to 'New Player', new_player_path, class: "btn btn-primary btn-sm", style: 'color: black' %> |
+<%= link_to 'Back', :back, class: "btn btn-secondary btn-sm", style: 'color: black' %>
 
 <br><br>
 
@@ -38,7 +38,7 @@
         <td><%= player.nome %></td>
         <td><%= player.nickname %></td>
         <td><%= player.sobrenome %></td>
-        <td><%= age player.datanasc.in_time_zone('Brasilia') %></td>
+        <td><%= age player.datanasc %></td>
         
         <td>
           
