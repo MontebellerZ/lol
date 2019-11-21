@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191108030257) do
+ActiveRecord::Schema.define(version: 20191121181049) do
+
+  create_table "championships", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "local"
+    t.integer  "champteam_id"
+    t.string   "premiacao"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "champteams", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "championship_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "player_roles", force: :cascade do |t|
     t.string   "player_id"
@@ -48,8 +64,9 @@ ActiveRecord::Schema.define(version: 20191108030257) do
     t.string   "nome"
     t.string   "sigla"
     t.string   "instituicao"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "champteam_id"
   end
 
 end

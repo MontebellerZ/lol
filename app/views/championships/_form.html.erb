@@ -1,0 +1,37 @@
+<%= form_for(championship) do |f| %>
+  <% if championship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(championship.errors.count, "error") %> prohibited this championship from being saved:</h2>
+
+      <ul>
+      <% championship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= f.label :local %>
+    <%= f.text_field :local %>
+  </div>
+
+  <div class="field">
+    <%= f.label :champteam_id %>
+    <%= f.number_field :champteam_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :premiacao %>
+    <%= f.text_field :premiacao %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

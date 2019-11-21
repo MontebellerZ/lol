@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Champteams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Championship</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @champteams.each do |champteam| %>
+      <tr>
+        <td><%= champteam.team_id %></td>
+        <td><%= champteam.championship_id %></td>
+        <td><%= link_to 'Show', champteam %></td>
+        <td><%= link_to 'Edit', edit_champteam_path(champteam) %></td>
+        <td><%= link_to 'Destroy', champteam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Champteam', new_champteam_path %>

@@ -1,0 +1,2 @@
+class Champteam < ApplicationRecord
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  local: MyString
+  champteam_id: 1
+  premiacao: MyString
+
+two:
+  nome: MyString
+  local: MyString
+  champteam_id: 1
+  premiacao: MyString

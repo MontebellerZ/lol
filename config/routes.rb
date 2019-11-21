@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :champteams
+  resources :championships
   get 'index/index'
 
   root to: "index#index"

@@ -1,0 +1,27 @@
+<%= form_for(champteam) do |f| %>
+  <% if champteam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(champteam.errors.count, "error") %> prohibited this champteam from being saved:</h2>
+
+      <ul>
+      <% champteam.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_id %>
+    <%= f.number_field :team_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :championship_id %>
+    <%= f.number_field :championship_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
