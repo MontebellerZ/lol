@@ -72,6 +72,10 @@
   color: white;
  }
  
+ #index p, #index li{
+  font-size: 18px;
+ }
+ 
  label{
   color: gold;
  }
