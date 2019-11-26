@@ -45,7 +45,7 @@ Player.create!([
 {
   nome: "Filipe",
   sobrenome: "Montebeller",
-  datanasc: Date(1999,10,14),
+  datanasc: Date.new(1999,10,14),
   nickname: "MontebellerZ",
   elo: "Ouro",
   divisao: 2,
@@ -54,7 +54,7 @@ Player.create!([
 {
   nome: "Lucas",
   sobrenome: "Aquino",
-  datanasc: Date(2002,3,24),
+  datanasc: Date.new(2002,3,24),
   nickname: "MineroL0L",
   elo: "Prata",
   divisao: 4,
@@ -63,7 +63,7 @@ Player.create!([
 {
   nome: "Valdério",
   sobrenome: "Snow",
-  datanasc: Date(1998,3,23),
+  datanasc: Date.new(1998,3,23),
   nickname: "CalikSnow",
   elo: "Ouro",
   divisao: 1,
@@ -72,7 +72,7 @@ Player.create!([
 {
   nome: "Gabriel",
   sobrenome: "Morozini",
-  datanasc: Date(2002,2,18),
+  datanasc: Date.new(2002,2,18),
   nickname: "Kurushi",
   elo: "Platina",
   divisao: 3,
@@ -81,7 +81,7 @@ Player.create!([
 {
   nome: "Victor",
   sobrenome: "Montebeller",
-  datanasc: Date(2001,10,9),
+  datanasc: Date.new(2001,10,9),
   nickname: "VictorM4ster",
   elo: "Platina",
   divisao: 4,
@@ -90,7 +90,7 @@ Player.create!([
 {
   nome: "Filipe",
   sobrenome: "Alves Vaz",
-  datanasc: Date(1987,3,19),
+  datanasc: Date.new(1987,3,19),
   nickname: "Vaz",
   elo: "Desafiante",
   divisao: "",
@@ -99,7 +99,7 @@ Player.create!([
 {
   nome: "Leandro",
   sobrenome: "Guedes",
-  datanasc: Date(1975,1,1),
+  datanasc: Date.new(1975,1,1),
   nickname: "Loord",
   elo: "Desafiante",
   divisao: "",
@@ -107,7 +107,7 @@ Player.create!([
 }
 ])
  
-p "Created #{Players.count} players"
+p "Created #{Player.count} players"
 
 Playerrole.create!([
 {
