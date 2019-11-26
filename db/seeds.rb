@@ -16,7 +16,7 @@ Team.create!([
 }
 ])
  
-p "Created #{Movie.count} movies"
+p "Created #{Team.count} team"
 
 Role.create!([
 {
