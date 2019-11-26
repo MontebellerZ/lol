@@ -7,4 +7,8 @@ class Player < ApplicationRecord
     
     validates_size_of :nome, :nickname, {minimum: 3, maximum: 20}
     
+    def rolesto(selec)
+        selec
+    end
+    
 end
