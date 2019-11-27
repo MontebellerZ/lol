@@ -23,6 +23,7 @@
   margin: 0px;
   padding: 0px;
   height: 100%;
+  user-select: none;
  }
  
  body{
@@ -33,8 +34,20 @@
   background-image: radial-gradient(closest-side at 50% 40%, black 130%, gold 250%);
  }
  
+ h1, h2, h3, h4, p, ul, li, table, tr, td, th, em, strong, label, input, select{
+  user-select: text;
+ }
+ 
+ #index{
+  line-height: 20px;
+ }
+ 
  #menu_principal{
   margin: 0 180px;
+ }
+ 
+ #menu_principal ul{
+  list-style-type: none
  }
  
  #menu_principal ul li{
@@ -51,17 +64,17 @@
   text-align: center;
  }
  
- #rodape{
-  background-color: rgba(0,0,0,0.8);
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  margin: 0 auto;
-  text-align: center;
- }
- 
  .btn{
   font-weight: bold;
+  color: black;
+ }
+ 
+ .btn:hover{
+  color: black;
+ }
+ 
+ .btn:active{
+  color: black;
  }
  
  p strong{
@@ -88,5 +101,4 @@
  
  ul{
   color: white;
-  list-style-type: none
  }

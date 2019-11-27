@@ -1,5 +1,10 @@
 Team.create!([
 {
+  nome: "Sem time",
+  sigla: "Free",
+  instituicao: ""
+},
+{
   nome: "Alunos de Areia",
   sigla: "AdA",
   instituicao: "SENAC"
